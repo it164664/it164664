@@ -1,0 +1,1218 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://wwwSchoolEnviroment.gr#"
+     xml:base="http://wwwSchoolEnviroment.gr"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://wwwSchoolEnviroment.gr"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasChild -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasChild">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#SullogosGonewm"/>
+        <owl:inverseOf rdf:resource="http://wwwSchoolEnviroment.gr#hasParent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasClass -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasClass">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasCourses -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasCourses">
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasGrade -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasGrade">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasParent">
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#SullogosGonewm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasResponsibleTeacher -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasResponsibleTeacher">
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <owl:inverseOf rdf:resource="http://wwwSchoolEnviroment.gr#isResponsible"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasStudent -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasStudent">
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+        <owl:inverseOf rdf:resource="http://wwwSchoolEnviroment.gr#hasClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasTrips -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#hasTrips">
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isOrganazing -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#isOrganazing">
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isOrganized -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#isOrganized">
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <owl:inverseOf rdf:resource="http://wwwSchoolEnviroment.gr#isOrganazing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isResponsible -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#isResponsible">
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isTeachedBy -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#isTeachedBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <owl:inverseOf rdf:resource="http://wwwSchoolEnviroment.gr#isTeaching"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isTeaching -->
+
+    <owl:ObjectProperty rdf:about="http://wwwSchoolEnviroment.gr#isTeaching">
+        <rdfs:range rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasBirthYear -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasBirthYear">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasCourseName -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasCourseName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasDate">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasDescription">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasGradeSTR -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasGradeSTR">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasLocation">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasSurname -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasSurname">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasTmhma -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasTmhma">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#hasWrario -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#hasWrario">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isA -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#isA">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Prosopiko"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isAlso -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#isAlso">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#isMemberOf -->
+
+    <owl:DatatypeProperty rdf:about="http://wwwSchoolEnviroment.gr#isMemberOf">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Anapsixis -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Anapsixis">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Deutera -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Deutera">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#DomainEntity -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#DomainEntity"/>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Ekdromes -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Ekdromes">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#DomainEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://wwwSchoolEnviroment.gr#isOrganized"/>
+                <owl:onClass rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Ekpaideutikh -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Ekpaideutikh">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#Ekdromes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Female -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Female">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#Gender"/>
+        <owl:disjointWith rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Gender -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Gender">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Male -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Male">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Mathimata -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Mathimata">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#DomainEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://wwwSchoolEnviroment.gr#isTeachedBy"/>
+                <owl:onClass rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#People -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#People">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#DomainEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://wwwSchoolEnviroment.gr#hasBirthYear"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Prosopiko -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Prosopiko">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Prwth -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Prwth">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Student -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Student">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://wwwSchoolEnviroment.gr#hasClass"/>
+                <owl:onClass rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://wwwSchoolEnviroment.gr#hasGrade"/>
+                <owl:onClass rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#SullogosGonewm -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#SullogosGonewm">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Taksi -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Taksi">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Teachers -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Teachers">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#People"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Trith -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Trith">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#Taksi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#Vathmologia -->
+
+    <owl:Class rdf:about="http://wwwSchoolEnviroment.gr#Vathmologia">
+        <rdfs:subClassOf rdf:resource="http://wwwSchoolEnviroment.gr#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#S_George_Georgiou -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#S_George_Georgiou">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2004</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">George</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Georgiou</hasSurname>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_A1"/>
+        <hasParent rdf:resource="http://wwwSchoolEnviroment.gr#g_Petros_Kwstas"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Aristos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#S_Makis_Kotsabasis -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#S_Makis_Kotsabasis">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2003</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasSurname rdf:datatype="&xsd;string">Kotsabasis</hasSurname>
+        <hasName rdf:datatype="&xsd;string">Makis</hasName>
+        <isMemberOf rdf:datatype="&xsd;string">Proedros</isMemberOf>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_B1"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Polu_kalos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#S_hraklhs_Touloumpas -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#S_hraklhs_Touloumpas">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1994</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <isMemberOf rdf:datatype="&xsd;string">Proedros</isMemberOf>
+        <hasSurname rdf:datatype="&xsd;string">Touloumpas</hasSurname>
+        <hasName rdf:datatype="&xsd;string">hraklis</hasName>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_A1"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Kalws"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#T_Fotini_Lamberi -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#T_Fotini_Lamberi">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1987</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <isAlso rdf:datatype="&xsd;string">Dieufthintis</isAlso>
+        <hasName rdf:datatype="&xsd;string">Fotini</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Lamberi</hasSurname>
+        <isResponsible rdf:resource="http://wwwSchoolEnviroment.gr#c_B2"/>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#c_A1 -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#c_A1">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Prwth"/>
+        <hasTmhma rdf:datatype="&xsd;string">A1</hasTmhma>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Boudapesti"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#c_A2 -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#c_A2">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Prwth"/>
+        <hasTmhma rdf:datatype="&xsd;string">A2</hasTmhma>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Boudapesti"/>
+        <hasStudent rdf:resource="http://wwwSchoolEnviroment.gr#s_Georgia_Voskoy"/>
+        <hasStudent rdf:resource="http://wwwSchoolEnviroment.gr#s_Vasilis_Ioannidis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#c_B1 -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#c_B1">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Deutera"/>
+        <hasTmhma rdf:datatype="&xsd;string">B1</hasTmhma>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Mouseio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#c_B2 -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#c_B2">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Deutera"/>
+        <hasTmhma rdf:datatype="&xsd;string">B2</hasTmhma>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Mouseio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#c_G1 -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#c_G1">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Trith"/>
+        <hasTmhma rdf:datatype="&xsd;string">G1</hasTmhma>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Falakro"/>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Italia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#c_G2 -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#c_G2">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Trith"/>
+        <hasTmhma rdf:datatype="&xsd;string">G2</hasTmhma>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Falakro"/>
+        <hasTrips rdf:resource="http://wwwSchoolEnviroment.gr#e_Italia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#e_Boudapesti -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#e_Boudapesti">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Anapsixis"/>
+        <hasDate rdf:datatype="&xsd;string">3-2-2004</hasDate>
+        <hasLocation rdf:datatype="&xsd;string">Boudapesti</hasLocation>
+        <hasDescription rdf:datatype="&xsd;string">Tasksidi Sthn boudapesti</hasDescription>
+        <isOrganized rdf:resource="http://wwwSchoolEnviroment.gr#t_Pasxalis_Kardelis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#e_Falakro -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#e_Falakro">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Anapsixis"/>
+        <hasDate rdf:datatype="&xsd;string">6-5-2003</hasDate>
+        <hasLocation rdf:datatype="&xsd;string">Falakro</hasLocation>
+        <hasDescription rdf:datatype="&xsd;string">taxiidi sto falakro</hasDescription>
+        <isOrganized rdf:resource="http://wwwSchoolEnviroment.gr#t_Panagiotis_koulouridis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#e_Italia -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#e_Italia">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Anapsixis"/>
+        <hasDate rdf:datatype="&xsd;string">3-8-2002</hasDate>
+        <hasLocation rdf:datatype="&xsd;string">Milano</hasLocation>
+        <hasDescription rdf:datatype="&xsd;string">taxidi sthn italia</hasDescription>
+        <isOrganized rdf:resource="http://wwwSchoolEnviroment.gr#t_Pasxalis_Kardelis"/>
+        <isOrganized rdf:resource="http://wwwSchoolEnviroment.gr#t_Tamila_Zabanotsikova"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#e_Mouseio -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#e_Mouseio">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Ekpaideutikh"/>
+        <hasDate rdf:datatype="&xsd;string">3-11-2002</hasDate>
+        <hasLocation rdf:datatype="&xsd;string">Benaki</hasLocation>
+        <hasDescription rdf:datatype="&xsd;string">ekpaideutikh ekrdomi sto benaki</hasDescription>
+        <isOrganized rdf:resource="http://wwwSchoolEnviroment.gr#T_Fotini_Lamberi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#g_Kwstas_Vasilokwstas -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#g_Kwstas_Vasilokwstas">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#SullogosGonewm"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1984</hasBirthYear>
+        <hasName rdf:datatype="&xsd;string">Kwstas</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Vasilokwstas</hasSurname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#g_Mixalis_Skordalias -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#g_Mixalis_Skordalias">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#SullogosGonewm"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1983</hasBirthYear>
+        <hasName rdf:datatype="&xsd;string">Mixalis</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Skordalias</hasSurname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#g_Petros_Kwstas -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#g_Petros_Kwstas">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#SullogosGonewm"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1984</hasBirthYear>
+        <hasSurname rdf:datatype="&xsd;string">Kwstas</hasSurname>
+        <hasName rdf:datatype="&xsd;string">Petros</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#g_Thanasis_Karabetoglou -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#g_Thanasis_Karabetoglou">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#SullogosGonewm"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1900</hasBirthYear>
+        <hasSurname rdf:datatype="&xsd;string">Karabetoglou</hasSurname>
+        <hasName rdf:datatype="&xsd;string">Thanasis</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#m_AOTH -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#m_AOTH">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <hasCourseName rdf:datatype="&xsd;string">Aoth</hasCourseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#m_Fysikh -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#m_Fysikh">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <hasCourseName rdf:datatype="&xsd;string">Fysikh</hasCourseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#m_Glwssa -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#m_Glwssa">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <hasCourseName rdf:datatype="&xsd;string">Glwssa</hasCourseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#m_Mathimatika -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#m_Mathimatika">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <hasCourseName rdf:datatype="&xsd;string">Mathimata</hasCourseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#m_Pliroforiki -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#m_Pliroforiki">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <hasCourseName rdf:datatype="&xsd;string">Plhroforikh</hasCourseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#m_Xhmeia -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#m_Xhmeia">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Mathimata"/>
+        <hasCourseName rdf:datatype="&xsd;string">Xhmeia</hasCourseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#p_Giwrgos_Fouskas -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#p_Giwrgos_Fouskas">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Prosopiko"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1973</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">6-2</hasWrario>
+        <hasSurname rdf:datatype="&xsd;string">Fouskas</hasSurname>
+        <isA rdf:datatype="&xsd;string">Fylakas</isA>
+        <hasName rdf:datatype="&xsd;string">Giwrgos</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#p_Roza_Bouldoza -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#p_Roza_Bouldoza">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Prosopiko"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1980</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">2-4</hasWrario>
+        <hasSurname rdf:datatype="&xsd;string">Bouldoza</hasSurname>
+        <isA rdf:datatype="&xsd;string">Katharistria</isA>
+        <hasName rdf:datatype="&xsd;string">Roza</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#p_Vasilis_Karapiperis -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#p_Vasilis_Karapiperis">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Prosopiko"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1978</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">7-2</hasWrario>
+        <hasSurname rdf:datatype="&xsd;string">Karapiperis</hasSurname>
+        <hasName rdf:datatype="&xsd;string">Vasilis</hasName>
+        <isA rdf:datatype="&xsd;string">YpeuthinosKylikeiou</isA>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Aglaia_Vounotripidou -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Aglaia_Vounotripidou">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2002</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Aglaia</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Vounotripidou</hasSurname>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_G1"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Aristos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Akrivi_Gourouna -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Akrivi_Gourouna">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2002</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Akrivi</hasName>
+        <hasName rdf:datatype="&xsd;string">Gourouna</hasName>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_G1"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Kakws"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Anna_Goula -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Anna_Goula">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2002</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Anna</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Goula</hasSurname>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_G2"/>
+        <hasParent rdf:resource="http://wwwSchoolEnviroment.gr#g_Kwstas_Vasilokwstas"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Kalws"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Danai_Mamai -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Danai_Mamai">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Danai</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Mamai</hasSurname>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_A1"/>
+        <hasParent rdf:resource="http://wwwSchoolEnviroment.gr#g_Thanasis_Karabetoglou"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Metrios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Ervis_Youri -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Ervis_Youri">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2002</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Ervis</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Youri</hasSurname>
+        <isMemberOf rdf:datatype="&xsd;string">melos</isMemberOf>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_G2"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Polu_kalos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Georgia_Voskoy -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Georgia_Voskoy">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2004</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Georgia</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Voskoy</hasSurname>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Kakws"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Ioannis_Kampouridis -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Ioannis_Kampouridis">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2003</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Ioannis</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Kampouridis</hasSurname>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_B1"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Metrios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Maria_Spatoula -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Maria_Spatoula">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2002</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <isMemberOf rdf:datatype="&xsd;string">Antiproedros</isMemberOf>
+        <hasName rdf:datatype="&xsd;string">Maria</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Spatoula</hasSurname>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_G2"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Aristos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Petros_Papanikolaou -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Petros_Papanikolaou">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2003</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <isMemberOf rdf:datatype="&xsd;string">Grammateas</isMemberOf>
+        <hasSurname rdf:datatype="&xsd;string">Papanikolaou</hasSurname>
+        <hasName rdf:datatype="&xsd;string">Petros</hasName>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_B2"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Kakws"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Vaios_Skordalias -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Vaios_Skordalias">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2002</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <isMemberOf rdf:datatype="&xsd;string">Melos</isMemberOf>
+        <hasSurname rdf:datatype="&xsd;string">Skordalias</hasSurname>
+        <hasName rdf:datatype="&xsd;string">Vaios</hasName>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_G1"/>
+        <hasParent rdf:resource="http://wwwSchoolEnviroment.gr#g_Mixalis_Skordalias"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Kalws"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Vasilia_Vasiliou -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Vasilia_Vasiliou">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2003</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Vasilia</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Vasiliou</hasSurname>
+        <hasClass rdf:resource="http://wwwSchoolEnviroment.gr#c_B2"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Metrios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#s_Vasilis_Ioannidis -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#s_Vasilis_Ioannidis">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Student"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">2004</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-2</hasWrario>
+        <hasSurname rdf:datatype="&xsd;string">Ioannidis</hasSurname>
+        <isMemberOf rdf:datatype="&xsd;string">Tamias</isMemberOf>
+        <hasName rdf:datatype="&xsd;string">Vasilis</hasName>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+        <hasCourses rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+        <hasGrade rdf:resource="http://wwwSchoolEnviroment.gr#v_Kalws"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#t_Axileas_Distropidis -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#t_Axileas_Distropidis">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1969</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-11</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Axileas</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Distropidis</hasSurname>
+        <isResponsible rdf:resource="http://wwwSchoolEnviroment.gr#c_A1"/>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_Fysikh"/>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#t_Axileas_Toumpas -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#t_Axileas_Toumpas">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1990</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">8-11</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Axileas</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Toumpas</hasSurname>
+        <isResponsible rdf:resource="http://wwwSchoolEnviroment.gr#c_A2"/>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_Pliroforiki"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#t_Eleni_micheleni -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#t_Eleni_micheleni">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <hasWrario rdf:datatype="&xsd;string">11-1</hasWrario>
+        <hasBirthYear rdf:datatype="&xsd;integer">1982</hasBirthYear>
+        <hasName rdf:datatype="&xsd;string">Eleni</hasName>
+        <hasSurname rdf:datatype="&xsd;string">micheleni</hasSurname>
+        <isResponsible rdf:resource="http://wwwSchoolEnviroment.gr#c_B1"/>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_Mathimatika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#t_Panagiotis_koulouridis -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#t_Panagiotis_koulouridis">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1960</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">7-2</hasWrario>
+        <hasName rdf:datatype="&xsd;string">Panagiotis</hasName>
+        <isAlso rdf:datatype="&xsd;string">Ypodieufthintis</isAlso>
+        <hasSurname rdf:datatype="&xsd;string">koulouridis</hasSurname>
+        <isResponsible rdf:resource="http://wwwSchoolEnviroment.gr#c_G1"/>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_AOTH"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#t_Pasxalis_Kardelis -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#t_Pasxalis_Kardelis">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Male"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <hasBirthYear rdf:datatype="&xsd;integer">1962</hasBirthYear>
+        <hasWrario rdf:datatype="&xsd;string">7-3</hasWrario>
+        <hasSurname rdf:datatype="&xsd;string">Kardelis</hasSurname>
+        <hasName rdf:datatype="&xsd;string">Pasxalis</hasName>
+        <isAlso rdf:datatype="&xsd;string">Ypodieufthintis</isAlso>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_Xhmeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#t_Tamila_Zabanotsikova -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#t_Tamila_Zabanotsikova">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Female"/>
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Teachers"/>
+        <hasWrario rdf:datatype="&xsd;string">12-2</hasWrario>
+        <hasBirthYear rdf:datatype="&xsd;integer">1983</hasBirthYear>
+        <hasName rdf:datatype="&xsd;string">Tamila</hasName>
+        <hasSurname rdf:datatype="&xsd;string">Zabonotsikova</hasSurname>
+        <isResponsible rdf:resource="http://wwwSchoolEnviroment.gr#c_G2"/>
+        <isTeaching rdf:resource="http://wwwSchoolEnviroment.gr#m_Glwssa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#v_Aristos -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#v_Aristos">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+        <hasGradeSTR rdf:datatype="&xsd;string">Aristos</hasGradeSTR>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#v_Kakws -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#v_Kakws">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+        <hasGradeSTR rdf:datatype="&xsd;string">Kakws</hasGradeSTR>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#v_Kalws -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#v_Kalws">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+        <hasGradeSTR rdf:datatype="&xsd;string">Kalws</hasGradeSTR>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#v_Metrios -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#v_Metrios">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+        <hasGradeSTR rdf:datatype="&xsd;string">Metrios</hasGradeSTR>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://wwwSchoolEnviroment.gr#v_Polu_kalos -->
+
+    <owl:NamedIndividual rdf:about="http://wwwSchoolEnviroment.gr#v_Polu_kalos">
+        <rdf:type rdf:resource="http://wwwSchoolEnviroment.gr#Vathmologia"/>
+        <hasGradeSTR rdf:datatype="&xsd;string">Polu_kalos</hasGradeSTR>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
