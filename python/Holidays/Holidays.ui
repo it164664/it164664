@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>570</width>
+    <height>496</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Holidays</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>571</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Al Arab Hotel</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(54, 54, 54);color:white</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Triangular</enum>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Holidays</string>
+    </attribute>
+    <widget class="QRadioButton" name="proti_Photo">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>151</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RadioButton</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>BurjAlArabHotel.jpg</normaloff>BurjAlArabHotel.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>500</width>
+       <height>500</height>
+      </size>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="deuteri_Photo">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>190</y>
+       <width>161</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Hilton Hotel</string>
+     </property>
+     <property name="text">
+      <string>RadioButton</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>hiltonhotelBW.jpg</normaloff>hiltonhotelBW.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>500</width>
+       <height>500</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="triti_Photo">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>340</y>
+       <width>151</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Ice Hotel</string>
+     </property>
+     <property name="text">
+      <string>RadioButton</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>icehotelBW.jpg</normaloff>icehotelBW.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>500</width>
+       <height>500</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Details</string>
+    </attribute>
+    <widget class="QCheckBox" name="breakfast">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>50</y>
+       <width>101</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 127);font-size:15px;</string>
+     </property>
+     <property name="text">
+      <string>Breakfast</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="dinner">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>100</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 0, 127);font-size:15px</string>
+     </property>
+     <property name="text">
+      <string>Dinner</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="Extra">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>150</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 127);font-size:15px;</string>
+     </property>
+     <property name="text">
+      <string>Extra Trip</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Room</string>
+    </attribute>
+    <widget class="QRadioButton" name="single">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>60</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 127);font-size:15px;</string>
+     </property>
+     <property name="text">
+      <string>Single</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="double_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>120</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 127);font-size:15px;</string>
+     </property>
+     <property name="text">
+      <string>Double</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="suite">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>170</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 127);font-size:15px;</string>
+     </property>
+     <property name="text">
+      <string>Suite</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showImage">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>60</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 127);font-size:15px;</string>
+     </property>
+     <property name="text">
+      <string>Show Icon</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="picture2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>150</y>
+       <width>291</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>Reports</string>
+    </attribute>
+    <widget class="QLabel" name="HotelLabel">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Al Arab Hotel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="options">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>331</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Options selected:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="roomLabel">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Single Room</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
